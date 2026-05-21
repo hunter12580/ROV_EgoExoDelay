@@ -1,0 +1,40 @@
+# ROSbridge / ROS# WebSocket parameters.
+# Reference configuration for the hardware-in-the-loop DEMONSTRATION mode
+# described in §3.3 of the manuscript (Supplemental Video S1).
+# This configuration is NOT used in the user-study loop — that runs on
+# Unity + UDP (see ../python_udp/server.py).
+#
+# Released under the MIT License — see ../../LICENSE.
+
+# WebSocket server
+port: 9090
+address: 0.0.0.0
+
+# Compression / chunking
+fragment_size: 16384
+delay_between_messages: 0.0  # ms
+
+# Allow large-payload messages (e.g. images from the EgoExo++ pipeline)
+max_message_size: 100000000  # 100 MB
+unregister_timeout: 10.0
+
+# Topic-list whitelist for the Unity client. The set below matches what
+# §3.3 describes — pose / IMU / battery telemetry inbound; motion setpoint
+# outbound; on-demand image topic for the EgoExo++ exocentric view stream.
+topics:
+  outbound:    # ROS → Unity
+    - name: /mavros/local_position/pose
+      type: geometry_msgs/PoseStamped
+    - name: /mavros/imu/data
+      type: sensor_msgs/Imu
+    - name: /mavros/battery
+      type: sensor_msgs/BatteryState
+    - name: /egoexo/exo_view
+      type: sensor_msgs/Image
+  inbound:     # Unity → ROS
+    - name: /mavros/setpoint_velocity/cmd_vel_unstamped
+      type: geometry_msgs/TwistStamped
+
+# Bidirectional update-rate target for the digital twin (Hz). Matches the
+# 30–60 Hz figure quoted in §3.3.
+twin_update_rate_hz: 60

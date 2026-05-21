@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+title: >-
+  ROV-EgoExo Teleoperation Study — Data, Code & Materials
+  (ACM THRI revision)
+repository-code: "https://github.com/hunter12580/ROV_EgoExoDelay"
+message: >-
+  If you use this dataset or the reproduction code, please cite the
+  accompanying paper and this archive.
+authors:
+  - family-names: Xu
+    given-names: Fang
+    affiliation: "ICIC Lab, University of Florida"
+    # orcid: https://orcid.org/0000-0000-0000-0000     # TODO
+  - family-names: Zhou
+    given-names: Tianyu
+    affiliation: "ICIC Lab, University of Florida"
+    # orcid:                                            # TODO
+  - family-names: Tian
+    given-names: Ruitong
+    affiliation: "ICIC Lab, University of Florida"
+  - family-names: Abdullah
+    given-names: Adnan
+    affiliation: "RoboPI Lab, University of Florida"
+  - family-names: Islam
+    given-names: "Md Jahidul"
+    affiliation: "RoboPI Lab, University of Florida"
+  - family-names: Du
+    given-names: Jing
+    affiliation: "ICIC Lab, University of Florida"
+    # orcid:                                            # TODO
+    email: eric.du@essie.ufl.edu
+preferred-citation:
+  type: article
+  title: >-
+    System Design and Validation of an Ego-Exocentric Mixed Reality
+    Framework in Compensating Delay for ROV Teleoperation
+  journal: "ACM Transactions on Human-Robot Interaction"
+  # year: 2026                                          # TODO upon publication
+  # volume:                                             # TODO
+  # doi:                                                # TODO upon publication
+  authors:
+    - family-names: Xu
+      given-names: Fang
+    - family-names: Zhou
+      given-names: Tianyu
+    - family-names: Tian
+      given-names: Ruitong
+    - family-names: Abdullah
+      given-names: Adnan
+    - family-names: Islam
+      given-names: "Md Jahidul"
+    - family-names: Du
+      given-names: Jing
